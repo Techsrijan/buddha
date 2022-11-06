@@ -1,6 +1,6 @@
 from gtts import *
 from playsound import *
-
+import os
 import random
 
 s=random.randint(1,20)
@@ -13,7 +13,7 @@ for i in range(3):
             text = ("you win the game")
             audio = gTTS(text)
             audio.save("gamer.mp3")
-            playsound("gamer.mp3")
+            playsound("gamer.mp3",block=True)
             print("you win the game")
 
         play_sound()
@@ -22,16 +22,13 @@ for i in range(3):
     else:
 
         def play_audio():
-            text = ("you lose the game")
-            audio = gTTS(text)
-            with audio.save("sound.mp3"):
-                try:
-                    playsound("sound.mp3")
-                    print("you lose the game")
-                except Exception as e:
-                    pass
-
-            play_audio()
+            #text = ("you lose the game")
+            #audio = gTTS(text)
+            #audio.save("har.mp3")
+            playsound("har.mp3")
+            print("you lose the game")
+            #os.remove("sound.mp3")
+        play_audio()
 
 
 
