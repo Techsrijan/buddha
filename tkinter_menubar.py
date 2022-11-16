@@ -13,7 +13,14 @@ main_menu.add_cascade(label="File",menu=fileMenu)
 fileMenu.add_command(label="New",command=msg, accelerator="Alt+Enter")
 fileMenu.add_separator()
 fileMenu.add_command(label="Save",  accelerator="Ctrl+S")
+
 fileMenu.add_command(label="Exit",command=quit)
+# add a submenu
+sub_menu = Menu(fileMenu, tearoff=0)
+sub_menu.add_command(label='Keyboard Shortcuts')
+sub_menu.add_command(label='Color Themes')
+# add the File menu to the menubar
+fileMenu.add_cascade(label="Preferences",menu=sub_menu)
 
 #creating Editmenu
 editMenu=Menu(main_menu)
