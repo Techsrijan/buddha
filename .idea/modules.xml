@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Corona/.idea/Corona.iml" filepath="$PROJECT_DIR$/../Corona/.idea/Corona.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Python-Music-Player-master/.idea/Python-Music-Player-master.iml" filepath="$PROJECT_DIR$/../Python-Music-Player-master/.idea/Python-Music-Player-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/buddha.iml" filepath="$PROJECT_DIR$/.idea/buddha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../phdbtech/.idea/phdbtech.iml" filepath="$PROJECT_DIR$/../phdbtech/.idea/phdbtech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../techpython/.idea/techpython.iml" filepath="$PROJECT_DIR$/../techpython/.idea/techpython.iml" />
+    </modules>
+  </component>
+</project>
