@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog,colorchooser
 root=Tk()
 root.title("My First Window")
 def getdata():
@@ -29,7 +29,21 @@ def save_file_Data():
     c = text.get(1.0, END)
     f=open("hello.txt","w")
     f.write(c)
-text=Text(root,selectbackground="grey",height=20,width=50,wrap=WORD)
+
+def save_As_Data():
+    f=filedialog.asksaveasfile(mode="w",defaultextension="*.txt")
+    c = text.get(1.0, END)
+    f.write(c)
+def foreground():
+    c=colorchooser.askcolor()
+    print(c)
+    text.config(background=c[1])
+
+def textground():
+    c=colorchooser.askcolor()
+    print(c)
+    text.config(foreground=c[0])
+text=Text(root,selectbackground="grey",height=3,width=50,wrap=WORD)
 #text.pack(fill=BOTH,expand=1)
 text.insert(INSERT,"THIS ID")
 text.pack()
@@ -57,6 +71,20 @@ btn5.pack() #to display the widget
 btn6=Button(root,text="savefile",bg="red",fg="white",
            font=("Comic Sans Ms",20,"bold"),command=save_file_Data)
 btn6.pack() #to display the widget
+
+
+btn7=Button(root,text="saveASfile",bg="green",fg="white",
+           font=("Comic Sans Ms",20,"bold"),command=save_As_Data)
+btn7.pack() #to display the widget
+
+
+btn8=Button(root,text="changeforeground--text color",bg="green",fg="white",
+           font=("Comic Sans Ms",20,"bold"),command=foreground)
+btn8.pack() #to display the widget
+
+btn9=Button(root,text="changeforeground--text color",bg="green",fg="white",
+           font=("Comic Sans Ms",20,"bold"),command=textground)
+btn9.pack() #to display the widget
 root.geometry("800x800+200+100") # to resize the window and location
 
 root.wm_iconbitmap("notepad.ico")#icon
